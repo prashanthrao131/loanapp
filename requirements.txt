@@ -1,0 +1,6 @@
+streamlit==1.24.0       # Streamlit web framework
+scikit-learn==1.2.2     # Machine learning library (for model.pkl)
+pandas==1.5.3           # Data manipulation library
+numpy==1.24.3           # Numerical computing library
+# Add any other libraries your app depends on:
+# e.g., joblib, matplotlib, etc.
