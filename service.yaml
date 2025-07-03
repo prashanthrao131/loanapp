@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: loan-predictor-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: loan-predictor
+  ports:
+  - port: 80        # External port 
+    targetPort: 8501  # Container's port (Streamlit)

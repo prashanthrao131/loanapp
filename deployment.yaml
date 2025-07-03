@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: loan-predictor-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: loan-predictor
+  template:
+    metadata:
+      labels:
+        app: loan-predictor
+    spec:
+      containers:
+      - name: loan-predictor
+        image: <YOUR-ACR-NAME>.azurecr.io/loan-predictor:<TAG>
+        ports:
+        - containerPort: 8501
